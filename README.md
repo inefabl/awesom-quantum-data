@@ -52,7 +52,7 @@
    - **优化目标**：提升资源协调成功率/吞吐；控制 grounding 以平衡复杂度；**调度能力**：○（pending/grounding 策略影响“调度/执行时机”）；**事务ACID**：√（面向事务保证：原子性/持久性等）；**真实DB集成**：√（MySQL 原型验证）；**验证平台**：Intel Xeon 2.13GHz, 48GB RAM; MySQL；**工程成熟度**：中
    - **关系模型适配**：高；**机器学习结合**：低；**张量网络表示**：低；**计算原生性（综合）**：中
 
-4. **Quantum Storage Design for Tables in RDBMS (QCOS/QROS, QDSM’24)**
+4. **Quantum Storage Design for Tables in RDBMS (QCOS/QROS, QDSM’24)**[[preoject](https://www.ifis.uni-luebeck.de/~groppe/qdsm/?page=paper&year=2024&paperid=p2)]
    *Tuodu Li et al., Quantum Storage Design for Tables in RDBMS (QDSM’24).*
    - **数据模型**：关系表（QCOS：列存；QROS：行存）
    - **压缩存储**：√（以叠加态在量子电路中编码表）；**索引结构**：—（存储格式本身；不引入 B+树等经典索引）；**数据规模**：实验含小表；并在 IBM 真机/模拟器验证（大表真机 Valid Ratio 近 0）；**量子态表示**：量子电路/叠加态寄存器（RowID/Data/Ancilla）；Hadamard/MCT 等门
@@ -60,7 +60,7 @@
    - **优化目标**：降低量子资源开销：qubit 随数据量对数增长；MCT 线性；并比较 QCOS/QROS；**事务ACID**：—（讨论可加入结果验证流程）；**验证平台**：IBM Q 设备 + 模拟器；**工程成熟度**：低-中
    - **关系模型适配**：高；**机器学习结合**：低；**张量网络表示**：低；**计算原生性（综合）**：中
 
-5. **Operational Framework for a Quantum Database (arXiv 2025)**
+5. **Operational Framework for a Quantum Database (arXiv 2025)**[[project](https://arxiv.org/abs/2405.14947)]
    *Rieger et al., Operational Framework for a Quantum Database, arXiv:2405.14947v2, 2025.*
    - **数据模型**：量子数据库四象限（CC/CQ/QC/QQ）；重点为 QC（量子索引 + 可克隆/经典数据）
    - **压缩存储**：√（量子索引 superposition state 压缩表示；索引寄存器仅需 ⌈log2(k)⌉ qubits）；**索引结构**：√（量子索引；独立 index/data registers）；**数据规模**：按 k 个索引元素建模；算法/框架级，未给大规模数据基准；**量子态表示**：|QDB^(k)⟩ = Σ ψ_j |j⟩_I |d_j⟩_D；区分 classical/quantum data 与 indexing
@@ -75,7 +75,7 @@
 
 [**⬆️返回目录**](#toc)
 
-1. **Quantum Algorithms for Element Distinctness (arXiv:quant-ph/0007016)**
+1. **Quantum Algorithms for Element Distinctness (arXiv:quant-ph/0007016)**[[project](https://ieeexplore.ieee.org/abstract/document/933880)]
    *Buhrman et al., Quantum Algorithms for Element Distinctness, arXiv:quant-ph/0007016v2 (2000).*
    - **数据模型**：—（算法/查询复杂度问题）
    - **数据规模**：输入规模 N（比较复杂度）；**量子态表示**：oracle/unitary + amplitude amplification
@@ -83,7 +83,7 @@
    - **优化目标**：降低比较复杂度：O(N^{3/4} log N)；有序情形 O(N^{1/2} log N)；**工程成熟度**：中
    - **关系模型适配**：低；**机器学习结合**：低；**张量网络表示**：低；**计算原生性（综合）**：高
 
-2. **Towards Quantum Data Structures for Enhanced Database Performance (QDSM’24)**
+2. **Towards Quantum Data Structures for Enhanced Database Performance (QDSM’24)**[[project](https://www.vldb.org/workshops/2024/proceedings/QDSM/QDSM.6.pdf)]
    *Littau et al., Towards Quantum Data Structures for Enhanced Database Performance (QDSM’24).*
    - **数据模型**：—（面向“数据库检索/操作”的量子数据结构概念）
    - **索引结构**：—（目标是减少传统索引依赖）；**数据规模**：—（电路级演示/概念性，未给大规模数据）；**量子态表示**：电路级量子数据结构（QPD）；基于 superposition/entanglement；借鉴 QRAM/QRAG
@@ -99,7 +99,7 @@
 [**⬆️返回目录**](#toc)
 
 1. **Private Quantum Database (arXiv 2025)**
-   *Gatti, Geerts & Hai, Private Quantum Database, arXiv:2508.19055v3, 2025.*
+   *Gatti, Geerts & Hai, Private Quantum Database, arXiv:2508.19055v3, 2025.*[[project](https://arxiv.org/abs/2508.19055)]
    - **数据模型**：关系表/键值检索（tuple-level retrieval）
    - **压缩存储**：○（QRAC 将 tuples 编码为量子态；偏隐私用途而非压缩导向）；**索引结构**：○（key→mutually unbiased bases / measurement basis routing；非传统索引）；**数据规模**：按 copy budget k / quantum states 数量计；面向 NISQ 混合架构，未给大规模行数实验；**量子态表示**：QRAC + mutually unbiased bases；测量破坏性 + no-cloning 保证隐私
    - **查询算子**：受限检索：PIR / SPIR（仅返回所请求 tuple）；**执行模式**：混合量子-经典：经典 DBMS 存储状态描述，查询时生成 fresh quantum states 并由客户端测量；**硬件依赖**：NISQ 门模型 + 经典 DBMS；**加载开销**：○（查询时需重新制备 fresh states；避免长期量子存储）；**计算原生性**：○（检索直接依赖量子测量，但量子态按需生成）
@@ -122,7 +122,7 @@
    - **关系模型适配**：中；**机器学习结合**：○（讨论 simulation optimization、error correction、ML 与数据管理交叉）；**张量网络表示**：○（将 tensor-network simulation 视为关键研究问题之一）；**计算原生性（综合）**：中
 
 2. **Quantum Data Management: From Theory to Opportunities (Tutorial / arXiv 2024)**
-   *Hai, Hung & Feld, Quantum Data Management: From Theory to Opportunities, arXiv:2403.02856v1, 2024.*
+   *Hai, Hung & Feld, Quantum Data Management: From Theory to Opportunities, arXiv:2403.02856v1, 2024.*c[[project](https://ieeexplore.ieee.org/abstract/document/10597772)]
    - **数据模型**：量子数据管理理论/教程框架；覆盖经典数据库问题与未来量子互联网数据系统
    - **数据规模**：以量子互联网、云量子计算、量子数据中心愿景为主；非固定实验规模；**量子态表示**：qubits、superposition、entanglement；并引入 quantum internet 中 entanglement-based transmission
    - **查询算子**：—（tutorial；回顾 query optimization、data integration、transaction mgmt 等并展望未来系统）；**执行模式**：理论/教程型：从 quantum computing fundamentals 到 quantum internet data systems；**硬件依赖**：NISQ 设备 + quantum internet（end nodes / repeater）+ 未来云量子系统；**加载开销**：○（讨论 quantum computing environment 中的数据处理与可达性问题）；**计算原生性**：○
@@ -137,7 +137,7 @@
 [**⬆️返回目录**](#toc)
 
 1. **Is Quantum-Based SQL Query Execution Viable? (QDSM’24)**
-   *Kesarwani & Haritsa, Is Quantum-Based SQL Query Execution Viable?, VLDB QDSM’24.*
+   *Kesarwani & Haritsa, Is Quantum-Based SQL Query Execution Viable?, VLDB QDSM’24.*[[project](https://www.ifis.uni-luebeck.de/~groppe/qdsm/?page=paper&year=2024&paperid=p5)]
    - **数据模型**：关系模型（SQL 查询执行）
    - **索引结构**：○（强调经典后处理用 lightweight index lookups 去假阳性）；**数据规模**：TPCH Q3 级查询示例（未给具体行数）；**量子态表示**：电路模型；Grover oracle；容错阈值 λ；输出含假阳/假阴
    - **查询算子**：σ, ⋈, ∪, ∩, −, Sort；并讨论 Grover/QFT 等可能加速点；**执行模式**：混合量子-经典（quantum engine + classical post-validation；quantum sentinel 决策路径）；**硬件依赖**：门模型量子电路处理器（如 Qiskit 平台）；**加载开销**：√（经典数据→qubits/QRAM/编码为核心挑战）；**计算原生性**：○
