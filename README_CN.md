@@ -9,6 +9,16 @@
 - 符号说明：**√** 表示明确支持或重点讨论，**○** 表示部分支持或有限涉及，**—** 表示未涉及或不是重点。
 
 <a id="toc"></a>
+
+| 五维分类 \ 时间轴 | 1982–2011 理论与表示基础                                      | 2013–2019 数据库语义萌芽                                                        | 2020–2022 张量执行与优化兴起                                 | 2023–2024 混合增强阶段                                                                                        | 2025–2026 系统整合阶段                                                                                        |
+| ---------- | ------------------------------------------------------ | ------------------------------------------------------------------------ | --------------------------------------------------- | ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- |
+| 数据模型       | QCQI；No-Cloning；TT Decomposition                       | Quantum Databases；Tensor-based Polystore；Quantum-inspired Recommendation | Tentris；TQP；FAQ                                     | Quantum Storage Design for Tables；Quantum Data Structures；Hybrid Sampling for AQP                       | Operational Framework for a Quantum Database；Private Quantum Database；Qute                              |
+| 存储与表示      | QCQI；TT Decomposition；MPS Compression & Classification | Quantum Databases；Tensor-based Polystore                                 | HiCOO；ALTO；Tentris                                  | Quantum Storage Design for Tables；Quantum Data Management in the NISQ Era；Quantum Data Structures       | Qute；Operational Framework for a Quantum Database；Private Quantum Database                              |
+| 查询与执行      | QCQI；Element Distinctness                              | Quantum Databases；Quantum-inspired Recommendation                        | FAQ；TQP；Join Order Optimisation on Quantum Hardware | Is Quantum-Based SQL Query Execution Viable?；Hybrid Sampling for AQP；Q2O                                | Qute；Operational Framework for a Quantum Database；Private Quantum Database                              |
+| 系统与工程      | TT Decomposition                                       | Quantum Databases                                                        | TQP；Tentris；Qymera                                  | Q2O；Quantum Annealing for Cloud Scheduling；Quantum Data Management in the NISQ Era                      | Qute；Operational Framework for a Quantum Database；Quantum Data Management: From Theory to Opportunities |
+| 扩展维度       | No-Cloning；QCQI                                        | Tensor-based Polystore；Quantum-inspired Recommendation                   | Tentris；HiCOO；MPS Compression & Classification      | Private Quantum Database；Quantum Annealing for Cloud Scheduling；Quantum Data Management in the NISQ Era | Qute；Private Quantum Database；Quantum Data Management: From Theory to Opportunities                     |
+
+
 ## 目录
 
 - [量子存储](#quantum-storage)
