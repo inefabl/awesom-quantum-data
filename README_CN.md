@@ -191,7 +191,7 @@
 [**⬆️返回目录**](#toc)
 
 1. **FAQ: Questions Asked Frequently (arXiv 2016)**
-   *Abo Khamis, Ngo & Rudra, FAQ: Questions Asked Frequently, arXiv:1504.04044v5, 2016.* [[Github](https://arxiv.org/abs/1504.04044)] 
+   *Abo Khamis, Ngo & Rudra, FAQ: Questions Asked Frequently, arXiv:1504.04044v5, 2016.* [[Paper](https://arxiv.org/abs/1504.04044)] 
    - **数据模型**：关系查询 / 函数聚合 / 超图模型（joins, MAP, matrix ops, logic）
    - **数据规模**：以因子/超边规模 N 与输出大小 Z 衡量；通用于 joins、PGM、matrix chain、DFT 等
    - **查询算子**：joins、聚合、MAP、#CQ/#QCQ、矩阵链乘、DFT 等统一为 FAQ；**执行模式**：经典执行：InsideOut / variable elimination / dynamic programming；**硬件依赖**：经典 CPU / 理论算法；**加载开销**：○（讨论 listing representation / oracle access；非 QRAM）；**计算原生性**：√（直接在 FAQ 表达/因子表示上计算）
@@ -214,7 +214,7 @@
    - **关系模型适配**：高；**机器学习结合**：低；**张量网络表示**：低；**计算原生性（综合）**：高
 
 2. **Join Order Optimisation on Quantum Hardware (PVLDB 2022)**
-   *Schönberger et al., eady to Leap (by Co-Design)? Join Order Optimisation on Quantum Hardware, PVLDB 15(1) 2022, 10.1145/3588946.* [[Paper](https://dl.acm.org/doi/10.1145/3588946)] [[Github](https://github.com/lfd/VLDB23)]
+   *Schönberger et al., eady to Leap (by Co-Design)? Join Order Optimisation on Quantum Hardware, PVLDB 15(1) 2022, 10.1145/3588946.* [[Paper](https://dl.acm.org/doi/10.1145/3588946)] [[Github](https://github.com/lfd/sigmod23-reproduction)]
    - **数据模型**：关系查询优化（Join Ordering）
    - **数据规模**：真实硬件评估：3–5 relations（D-Wave）；更大规模需嵌入大量物理 qubits；**量子态表示**：QUBO/Ising 映射到 qubits；gate-based/QAOA 与退火比较
    - **查询算子**：—（优化器子任务：join 顺序；非直接 SQL 算子执行）；**执行模式**：混合量子-经典（优化子问题上 QPU；其余经典）；**硬件依赖**：NISQ QPU（gate-based + quantum annealing；IBM/Rigetti/D-Wave 等）；**加载开销**：—（不加载 payload；主要加载代价模型/阈值离散等）；**计算原生性**：√
@@ -335,7 +335,7 @@
    - **关系模型适配**：低；**机器学习结合**：中（张量分析/分解常用于数据挖掘/ML）；**张量网络表示**：低；**压缩比**：最多约 2.5× 少于 COO（索引更紧凑）；**计算原生性（综合）**：高
 
 10. **HiCOO (SC18 slides / talk deck)**
-   *Li et al., HiCOO SC18 slides (pap511s5.pdf).* [[Paper](https://www.sc18.supercomputing.org/proceedings/tech_paper/tech_paper_files/pap511s5.pdf)] [[Github](https://github.com/hpcgarage/ParTI)]
+   *Li et al., HiCOO SC18 slides (pap511s5.pdf).* [[Source](https://www.sc18.supercomputing.org/proceedings/tech_paper/tech_paper_files/pap511s5.pdf)] [[Github](https://github.com/hpcgarage/ParTI)]
    - **数据模型**：稀疏张量（多维数组）
    - **压缩存储**：√（强调 index compression + data locality）；**索引结构**：√（展示 block/superblock 结构与参数 αb,L,B）；**数据规模**：3D/4D tensors（nell2, choa, darpa, fb-m, fb-s, deli, nips, enron, flickr, deli4d 等）
    - **查询算子**：MTTKRP/CPD（slides 展示 speedup 与 thread scalability）；**执行模式**：经典并行（superblock scheduler；SIMD 优化）；**硬件依赖**：CPU multicore + SIMD；**加载开销**：○（Z-order sorting、index compression、SIMD 分解贡献）；**计算原生性**：√
