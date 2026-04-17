@@ -2,6 +2,8 @@
 
 [English](README.md) | [中文](README_CN.md)
 
+- Time-ordered companion: [timeOrder-EN](timeOrder-EN.md)
+
 > This README is reorganized from the survey spreadsheet into a README-style literature map with **topic sections + grouped entries + concise structured notes**. It covers quantum storage, quantum data structures, quantum SQL execution, quantum-enhanced optimization, tensor-network computation, and quantum-inspired machine learning.
 
 ## Notes
@@ -13,6 +15,7 @@
 <a id="toc"></a>
 ## Contents
 
+- [Time-Ordered View (EN)](timeOrder-EN.md)
 - [Quantum Storage](#quantum-storage)
 - [Quantum Data Structures](#quantum-data-structures)
 - [Private Quantum Databases](#private-quantum-databases)
