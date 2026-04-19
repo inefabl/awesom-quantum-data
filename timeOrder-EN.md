@@ -74,6 +74,7 @@
   - **Quantum Data Management: From Theory to Opportunities (arXiv 2024):** [Paper](https://ieeexplore.ieee.org/abstract/document/10597772)
   - **Opportunities for Quantum Acceleration of Databases (PVLDB 2023):** [Paper](https://dl.acm.org/doi/10.14778/3598581.3598603) | [Project](https://github.com/TobiasWinker/QC4DB_VQC_Tutorial)
   - **Quantum Annealing Method for Dynamic VM/Task Allocation (ICDEW 2023):** [Paper](https://doi.org/10.1109/ICDEW58674.2023.00023) | [Project](https://github.com/valterUo/quantum-annealing-method-for-dynamic-workflow-scheduling-in-cloud-from-sustainabilitity-perspective)
+  - **The State Preparation of Multivariate Normal Distributions using Tree Tensor Network：** [Paper](https://arxiv.org/abs/2412.12067) 
 
 ## 2025–2026: System Integration and Quantum-Native Direction
 
